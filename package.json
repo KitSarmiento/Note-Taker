@@ -1,0 +1,29 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "The Note Taker application allows users to create and store notes. It utilizes an Express.js back end to save and retrieve note data from a JSON file.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Katrina Sarmiento",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "inquirer": "^8.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KitSarmiento/Note-Taker.git"
+  },
+  "keywords": [
+    "Note",
+    "taker",
+    "note"
+  ],
+  "bugs": {
+    "url": "https://github.com/KitSarmiento/Note-Taker/issues"
+  },
+  "homepage": "https://github.com/KitSarmiento/Note-Taker#readme"
+}
