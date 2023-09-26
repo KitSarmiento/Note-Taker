@@ -6,11 +6,14 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Routes
+
+//Get request
 app.get("/api/notes", (req, res) => {
   const notes = JSON.parse(fs.readFileSync("./db/db.json"));
   res.json(notes);
 });
 
+//Post request
 app.post("/api/notes", (req, res) => {
   const newNote = req.body;
   const notes = JSON.parse(fs.readFileSync("./db/db.json"));
@@ -26,4 +29,9 @@ app.get("/notes", (req, res) => {
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/index.html"));
+});
+
+//Listen for connections
+app.listen(PORT, () => {
+  console.log(`Express Server is listening on port ${PORT}`);
 });
