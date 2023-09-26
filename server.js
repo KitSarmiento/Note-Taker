@@ -5,6 +5,11 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+//  Middleware for parsing JSON and urlencoded form data. This is based on the class activity and use it as a reference to the assignment.
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
 // Routes
 
 //Get request
