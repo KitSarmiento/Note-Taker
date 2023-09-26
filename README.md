@@ -18,6 +18,14 @@ Heroku Link:
 
 To access the Note Taker application, start by clicking on the Heroku link. This will take you to a landing page where you can click the "Get Started" button. You will then be directed to the Notes page. Here, you will see two main sections: the left corner is where your saved notes will appear, and the right corner is where you can write and edit your notes. To save a note, simply click the "Save" button at the application’s top-right corner. Your note will automatically be added to the list on the left. If you no longer need a note, you have the option to delete it by clicking on the "Delete" button associated with the note you want to remove. These steps will help you effectively write, save, and manage your notes using the Note Taker application.
 
+Screenshot of the landing page:
+
+![landing-page-screenshot](https://github.com/KitSarmiento/Note-Taker/assets/135483936/cdae0620-14ec-4add-99f2-e797c24de845)
+
+Screenshot of the note page:
+
+![note-page-screenshot](https://github.com/KitSarmiento/Note-Taker/assets/135483936/70c42c48-45fe-418f-8f61-85ff8cc87cc8)
+
 ## Credits
 
 Express.JS - https://expressjs.com/en/starter/basic-routing.html
