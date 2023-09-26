@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const uuid = require("uuid"); // Import the entire UUID module
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -9,6 +10,11 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
+
+// Generate a UUID for the notes
+const generateUUID = () => {
+  return uuid.v4(); // Use uuid.v4()
+};
 
 // Routes
 //Get request
@@ -21,7 +27,7 @@ app.get("/api/notes", (req, res) => {
 app.post("/api/notes", (req, res) => {
   const newNote = req.body;
   const notes = JSON.parse(fs.readFileSync("./db/db.json"));
-  newNote.id = notes.length + 1;
+  newNote.id = generateUUID(); // Generate a new UUID for the note
   notes.push(newNote);
   fs.writeFileSync("./db/db.json", JSON.stringify(notes));
   res.json(newNote);
@@ -38,7 +44,7 @@ app.get("*", (req, res) => {
 //Bonus section
 // add the DELETE route to the application
 app.delete("/api/notes/:id", (req, res) => {
-  const idToDelete = parseInt(req.params.id);
+  const idToDelete = req.params.id;
   let notes = JSON.parse(fs.readFileSync("./db/db.json"));
   notes = notes.filter((note) => note.id !== idToDelete);
   fs.writeFileSync("./db/db.json", JSON.stringify(notes));
