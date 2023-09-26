@@ -35,6 +35,16 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
+//Bonus section
+// add the DELETE route to the application
+app.delete("/api/notes/:id", (req, res) => {
+  const idToDelete = parseInt(req.params.id);
+  let notes = JSON.parse(fs.readFileSync("./db/db.json"));
+  notes = notes.filter((note) => note.id !== idToDelete);
+  fs.writeFileSync("./db/db.json", JSON.stringify(notes));
+  res.sendStatus(200);
+});
+
 //Listen for connections
 app.listen(PORT, () => {
   console.log(`Express Server is listening at http://localhost:${PORT}`);
