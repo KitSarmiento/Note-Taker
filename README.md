@@ -6,7 +6,7 @@ The Note Taker application allows users to create and store notes. It utilizes a
 
 Create a user-friendly web-based Note Taker tool powered by Express.js. It should allow users to easily write, store, and manage notes from any device with internet access. The goal is to increase productivity and improve note-taking convenience for individuals and small businesses.
 
-Heroku Link:
+Heroku Link: https://mighty-bayou-75107-3d2f68bf65b2.herokuapp.com/
 
 ## Installation
 
@@ -14,7 +14,7 @@ No installation is required for this application. To access the application, ple
 
 ## Usage
 
-Heroku Link:
+Heroku Link: https://mighty-bayou-75107-3d2f68bf65b2.herokuapp.com/
 
 To access the Note Taker application, start by clicking on the Heroku link. This will take you to a landing page where you can click the "Get Started" button. You will then be directed to the Notes page. Here, you will see two main sections: the left corner is where your saved notes will appear, and the right corner is where you can write and edit your notes. To save a note, simply click the "Save" button at the application’s top-right corner. Your note will automatically be added to the list on the left. If you no longer need a note, you have the option to delete it by clicking on the "Delete" button associated with the note you want to remove. These steps will help you effectively write, save, and manage your notes using the Note Taker application.
 
