@@ -17,13 +17,13 @@ const generateUUID = () => {
 };
 
 // Routes
-//Get request
+// Get request
 app.get("/api/notes", (req, res) => {
   const notes = JSON.parse(fs.readFileSync("./db/db.json"));
   res.json(notes);
 });
 
-//Post request
+// Post request
 app.post("/api/notes", (req, res) => {
   const newNote = req.body;
   const notes = JSON.parse(fs.readFileSync("./db/db.json"));
@@ -41,8 +41,8 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
-//Bonus section
-// add the DELETE route to the application
+// Bonus section
+// Add the DELETE route to the application
 app.delete("/api/notes/:id", (req, res) => {
   const idToDelete = req.params.id;
   let notes = JSON.parse(fs.readFileSync("./db/db.json"));
@@ -51,7 +51,7 @@ app.delete("/api/notes/:id", (req, res) => {
   res.sendStatus(200);
 });
 
-//Listen for connections
+// Listen for connections
 app.listen(PORT, () => {
   console.log(`Express Server is listening at http://localhost:${PORT}`);
 });
