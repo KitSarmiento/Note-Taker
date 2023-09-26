@@ -11,7 +11,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // Routes
-
 //Get request
 app.get("/api/notes", (req, res) => {
   const notes = JSON.parse(fs.readFileSync("./db/db.json"));
@@ -38,5 +37,5 @@ app.get("*", (req, res) => {
 
 //Listen for connections
 app.listen(PORT, () => {
-  console.log(`Express Server is listening on port ${PORT}`);
+  console.log(`Express Server is listening at http://localhost:${PORT}`);
 });
